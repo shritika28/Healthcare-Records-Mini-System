@@ -5,8 +5,6 @@
    Developer JD typically asks for — stored procedures, triggers,
    reporting views, and basic optimization (indexing).
 
-   Run this in SQL Server Management Studio (SSMS), Azure Data
-   Studio, or a local SQL Server container.
    ============================================================ */
 
 CREATE DATABASE HealthcareRecordsDemo;
