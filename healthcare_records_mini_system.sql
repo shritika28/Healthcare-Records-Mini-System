@@ -1,10 +1,5 @@
 /* ============================================================
    Healthcare Records Mini-System (Microsoft SQL Server / T-SQL)
-   ============================================================
-   Purpose: small demo system covering the core skills a SQL
-   Developer JD typically asks for — stored procedures, triggers,
-   reporting views, and basic optimization (indexing).
-
    ============================================================ */
 
 CREATE DATABASE HealthcareRecordsDemo;
@@ -133,8 +128,7 @@ GO
 -- ============================================================
 -- 5. REPORTING VIEW
 --    Pre-built report: prescriptions issued per month, per
---    doctor — maps directly to the JD's "creating reports"
---    responsibility for stakeholders.
+--    doctor 
 -- ============================================================
 
 CREATE VIEW vw_MonthlyPrescriptionReport AS
