@@ -35,5 +35,3 @@ healthcare-records domain.
 6. Test the optimization: turn on "Include Actual Execution Plan" in SSMS,
    run a query filtering `Visits` by `PatientID`, and observe the plan use
    an Index Seek instead of a Table Scan.
-
-
