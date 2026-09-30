@@ -36,29 +36,4 @@ healthcare-records domain.
    run a query filtering `Visits` by `PatientID`, and observe the plan use
    an Index Seek instead of a Table Scan.
 
-## What to actually understand before an interview
 
-If this comes up in conversation, be ready to explain, in your own words:
-
-- **Why a stored procedure instead of writing the same query in application
-  code each time** (reusability, centralized logic, reduced network
-  round-trips, easier permissions management).
-- **Why a trigger fires on both INSERT and UPDATE, and how the `inserted`/
-  `deleted` pseudo-tables work** (SQL Server automatically populates these
-  during DML operations — `deleted` has the old row on an UPDATE, `inserted`
-  has the new one).
-- **Why the index targets `PatientID` specifically** (it's the column most
-  frequently filtered on, based on the stored procedure's WHERE clause —
-  indexing decisions should follow actual query patterns, not be applied
-  blindly to every column).
-- **The tradeoff of indexing** (faster reads, but slightly slower writes
-  since the index must also be updated on every INSERT/UPDATE/DELETE).
-
-## Honest scope note
-
-This is a learning/demo project built quickly to have something concrete
-in Microsoft SQL Server (T-SQL) specifically, since prior projects used
-SQLite and MySQL. It does not include Oracle PL/SQL — if a role requires
-both Oracle and MS-SQL, be upfront that your hands-on experience so far is
-MS-SQL/T-SQL, with SQL fundamentals (joins, subqueries, schema design)
-transferring from SQLite/MySQL work on other projects.
